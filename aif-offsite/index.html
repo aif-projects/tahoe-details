@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AIF Team Offsite — Lake Tahoe 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- ── NAVIGATION ── -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <span class="nav-brand">AIF &nbsp;·&nbsp; Lake <em>Tahoe</em> 2026</span>
+    <button class="nav-tab" data-page="itinerary">Itinerary</button>
+    <button class="nav-tab" data-page="rooms">Rooms</button>
+    <button class="nav-tab" data-page="cars">Cars</button>
+    <button id="admin-btn" class="nav-tab admin-tab" style="margin-left: auto;">Admin</button>
+  </div>
+</nav>
+
+<!-- ── ADMIN LOGIN MODAL ── -->
+<div id="admin-modal" class="modal">
+  <div class="modal-content">
+    <h2>Admin Login</h2>
+    <input type="password" id="admin-password" placeholder="Enter admin password" class="admin-input">
+    <div class="modal-buttons">
+      <button id="admin-login-btn" class="btn btn-primary">Login</button>
+      <button id="admin-cancel-btn" class="btn btn-secondary">Cancel</button>
+    </div>
+    <div id="admin-message" class="admin-message"></div>
+  </div>
+</div>
+
+<!-- ── ADMIN PANEL ── -->
+<div id="admin-panel" class="admin-panel" style="display: none;">
+  <div class="admin-panel-content">
+    <span>Admin Mode: ON</span>
+    <button id="admin-logout-btn" class="btn btn-secondary">Logout</button>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE: ITINERARY
+══════════════════════════════════════ -->
+<div id="page-itinerary" class="page">
+  <div class="page-wrap">
+
+    <div class="header">
+      <span class="header-eyebrow">AIF Team — April 2026</span>
+      <h1>Lake <em>Tahoe</em><br>Offsite</h1>
+      <p class="header-sub">Apr 13 – 17 &nbsp;·&nbsp; Mountain View &amp; Lake Tahoe, CA</p>
+      <div class="header-line"></div>
+    </div>
+
+    <p class="section-label">Mountain View</p>
+
+    <div class="day-card office">
+      <div class="day-header">
+        <div class="day-date">
+          <span class="day-name">Monday</span>
+          <span class="day-full-date">April 13</span>
+        </div>
+        <span class="day-badge badge-office">Office Day</span>
+      </div>
+      <div class="events">
+        <div class="event">
+          <span class="event-time">All Day</span>
+          <span class="event-dot dot-office"></span>
+          <div class="event-body"><div class="event-title">Work at the MV Office</div></div>
+        </div>
+        <div class="event">
+          <span class="event-time">Evening</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body"><div class="event-title">Free Time</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card office">
+      <div class="day-header">
+        <div class="day-date">
+          <span class="day-name">Tuesday</span>
+          <span class="day-full-date">April 14</span>
+        </div>
+        <span class="day-badge badge-office">Office Day</span>
+      </div>
+      <div class="events">
+        <div class="event">
+          <span class="event-time">All Day</span>
+          <span class="event-dot dot-office"></span>
+          <div class="event-body"><div class="event-title">Work at the MV Office</div></div>
+        </div>
+        <div class="event">
+          <span class="event-time">Evening</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body"><div class="event-title">Free Time</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mountain-divider">
+      <svg width="56" height="34" viewBox="0 0 56 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <polygon points="28,2 54,32 2,32" fill="#EAF3FA" stroke="#4A7C9E" stroke-width="1.5" stroke-linejoin="round"/>
+        <polygon points="13,32 28,10 43,32" fill="#4A7C9E" opacity="0.22"/>
+      </svg>
+    </div>
+
+    <p class="section-label">Tahoe Bound</p>
+
+    <div class="day-card travel">
+      <div class="day-header">
+        <div class="day-date">
+          <span class="day-name">Wednesday</span>
+          <span class="day-full-date">April 15</span>
+        </div>
+        <span class="day-badge badge-travel">Travel Day</span>
+      </div>
+      <div class="events">
+        <div class="event">
+          <span class="event-time">Morning</span>
+          <span class="event-dot dot-travel"></span>
+          <div class="event-body">
+            <div class="event-title">Breakfast to Go &amp; Depart MV</div>
+            <div class="event-detail">Rental vans · All AIF team except Andrew</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Noon</span>
+          <span class="event-dot dot-travel"></span>
+          <div class="event-body">
+            <div class="event-title">Lunch on the Road</div>
+            <div class="event-detail"><a href="https://www.karensbakery.com/todays-menu/" target="_blank" class="event-link">Karen's Bakery &amp; Cafe</a></div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">2:00 PM</span>
+          <span class="event-dot dot-water"></span>
+          <div class="event-body">
+            <div class="event-title">Arrive at Airbnb</div>
+            <div class="event-detail">Settle in · Free time</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Afternoon</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body">
+            <div class="event-title">Team Dinner Prep</div>
+            <div class="event-detail">Cook together at the house</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Evening</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body">
+            <div class="event-title">Dinner at the House</div>
+            <div class="event-detail">S'mores &amp; board games &amp; short team debrief</div>
+            <span class="event-tag tag-fun">House Night</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card tahoe highlight-card">
+      <div class="day-header">
+        <div class="day-date">
+          <span class="day-name">Thursday</span>
+          <span class="day-full-date">April 16</span>
+        </div>
+        <span class="day-badge badge-tahoe">Big Day</span>
+      </div>
+      <div class="events">
+        <div class="event">
+          <span class="event-time">Morning</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body">
+            <div class="event-title">Breakfast at the Airbnb</div>
+            <div class="event-detail">Free time until 11:00 AM</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">11:30 AM</span>
+          <span class="event-dot dot-water"></span>
+          <div class="event-body">
+            <div class="event-title">Arrival at the Marina</div>
+            <div class="event-detail">Meet up before boarding</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">12:00 – 2:00 PM</span>
+          <span class="event-dot dot-water"></span>
+          <div class="event-body">
+            <div class="event-title"><a href="https://www.tahoebleuwave.com/industry-night-sunset-cruise" target="_blank" class="event-link">Boat Ride on Lake Tahoe</a></div>
+            <span class="event-tag tag-res">Reserved</span>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">2:30 – 5:00 PM</span>
+          <span class="event-dot dot-bark"></span>
+          <div class="event-body">
+            <div class="event-title"><a href="https://www.thehotspotstudios.com/south-lake-tahoe-ca/#projects" target="_blank" class="event-link">Pottery Class + Snacks</a></div>
+            <span class="event-tag tag-fun">Team Activity</span>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Evening</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body">
+            <div class="event-title"><a href="https://www.caesars.com/caesars-republic-lake-tahoe/restaurants/wolf-by-vanderpump/" target="_blank" class="event-link">Team Dinner at Wolf by Vanderpump</a></div>
+            <div class="event-detail">Reservation for 21 · Right after pottery class</div>
+            <span class="event-tag tag-res">Reservation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="day-card return">
+      <div class="day-header">
+        <div class="day-date">
+          <span class="day-name">Friday</span>
+          <span class="day-full-date">April 17</span>
+        </div>
+        <span class="day-badge badge-return">Return Day</span>
+      </div>
+      <div class="events">
+        <div class="event">
+          <span class="event-time">Morning</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body"><div class="event-title">Breakfast at the Airbnb</div></div>
+        </div>
+        <div class="event">
+          <span class="event-time">Morning</span>
+          <span class="event-dot dot-pine"></span>
+          <div class="event-body">
+            <div class="event-title">Group Hike</div>
+            <div class="event-detail">Tahoe Rim Trail or nearby trails</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Noon</span>
+          <span class="event-dot dot-water"></span>
+          <div class="event-body">
+            <div class="event-title"><a href="https://jimmysatthelandingresortspa.menu-res.com/" target="_blank" class="event-link">Team Lunch at Jimmy's at the Landing Resort</a></div>
+            <span class="event-tag tag-res">Reservation</span>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Afternoon</span>
+          <span class="event-dot dot-travel"></span>
+          <div class="event-body">
+            <div class="event-title">Depart for Home</div>
+            <div class="event-detail">Bay Area team leaves after lunch · Rental vans back to MV</div>
+          </div>
+        </div>
+        <div class="event">
+          <span class="event-time">Fri – Sat</span>
+          <span class="event-dot dot-office"></span>
+          <div class="event-body">
+            <div class="event-title">Travelers Head Home</div>
+            <div class="event-detail">Return Friday night or Saturday at your leisure</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>AIF Team Offsite · April 13 – 17, 2026</strong><br>Mountain View Office → Lake Tahoe, CA</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE: ROOMS
+══════════════════════════════════════ -->
+<div id="page-rooms" class="page">
+  <div class="page-wrap">
+
+    <div class="header">
+      <span class="header-eyebrow">Where You're Staying</span>
+      <h1>Room <em>Assignments</em></h1>
+      <p class="header-sub">South Lake Tahoe, CA</p>
+      <div class="header-line"></div>
+    </div>
+
+    <div class="airbnb-info-card">
+      <div class="info-block">
+        <div class="info-label">Address</div>
+        <div class="info-value">1379 Herbert Avenue<br>South Lake Tahoe, CA 96150</div>
+      </div>
+      <div class="info-block">
+        <div class="info-label">Property</div>
+        <div class="info-value">Private Airbnb — 13 Bedrooms<br>All rooms are en suite</div>
+        <a href="https://www.airbnb.com/rooms/1533430427938628800?source_impression_id=p3_1773952807_P3zedl0flessdSKw" target="_blank" class="info-link">View on Airbnb →</a>
+      </div>
+    </div>
+
+    <p class="section-label">Room Details</p>
+
+    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+      <span></span>
+      <button id="rooms-edit-btn" class="btn btn-edit" style="display: none;">Edit Rooms</button>
+      <div id="rooms-edit-controls" class="edit-controls" style="display: none;">
+        <button id="rooms-save-btn" class="btn btn-primary">Save</button>
+        <button id="rooms-cancel-btn" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+    <div class="rooms-table-wrap">
+      <table class="rooms-table" id="rooms-table">
+        <thead>
+          <tr>
+            <th>Room</th>
+            <th>Capacity</th>
+            <th>Beds</th>
+            <th>En Suite</th>
+            <th>Expected Pairing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-room="1" data-beds="2 singles">
+            <td class="room-num">Bedroom 1</td>
+            <td><span class="capacity-pill">2</span></td>
+            <td class="beds-cell">2 singles</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Ruby, Natalia</td>
+          </tr>
+          <tr data-room="2" data-beds="1 king">
+            <td class="room-num">Bedroom 2</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 king</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Eli Chen, Nikki</td>
+          </tr>
+          <tr data-room="3" data-beds="1 king">
+            <td class="room-num">Bedroom 3</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 king</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Andy Ku, Ellen</td>
+          </tr>
+          <tr data-room="4" data-beds="1 king">
+            <td class="room-num">Bedroom 4</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 king</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Dominic Chung</td>
+          </tr>
+          <tr data-room="5" data-beds="1 king">
+            <td class="room-num">Bedroom 5</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 king</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Rishabh Singhal, Michelle</td>
+          </tr>
+          <tr data-room="6" data-beds="1 queen">
+            <td class="room-num">Bedroom 6</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 queen</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Jon Zemmelman, Jill</td>
+          </tr>
+          <tr data-room="7" data-beds="2 queens">
+            <td class="room-num">Bedroom 7</td>
+            <td><span class="capacity-pill">2</span></td>
+            <td class="beds-cell">2 queens</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Jon, Dan</td>
+          </tr>
+          <tr data-room="8" data-beds="1 queen + 1 bunk bed">
+            <td class="room-num">Bedroom 8</td>
+            <td><span class="capacity-pill">2</span></td>
+            <td class="beds-cell">1 queen + 1 bunk bed</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Andy, Rakesh</td>
+          </tr>
+          <tr data-room="9" data-beds="1 queen">
+            <td class="room-num">Bedroom 9</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 queen</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Katherine Baird, Eva</td>
+          </tr>
+          <tr data-room="10" data-beds="1 king">
+            <td class="room-num">Bedroom 10</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 king</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Ellie Jenkins, Kirsty</td>
+          </tr>
+          <tr data-room="11" data-beds="1 king, 2 queens, 1 single, 1 bunk">
+            <td class="room-num">Bedroom 11</td>
+            <td><span class="capacity-pill large">5</span></td>
+            <td class="beds-cell">1 king, 2 queens, 1 single, 1 bunk</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Ellie, Katherine, Shannon</td>
+          </tr>
+          <tr data-room="12" data-beds="1 king">
+            <td class="room-num">Bedroom 12</td>
+            <td><span class="capacity-pill">1</span></td>
+            <td class="beds-cell">1 king</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Jill Shih</td>
+          </tr>
+          <tr data-room="13" data-beds="2 kings, 2 queens, 1 single, 1 bunk">
+            <td class="room-num">Bedroom 13</td>
+            <td><span class="capacity-pill large">6</span></td>
+            <td class="beds-cell">2 kings, 2 queens, 1 single, 1 bunk</td>
+            <td><span class="suite-dot"></span></td>
+            <td class="names-list">Andrew, Rafael, Rish, Dom</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="footer">
+      <p><strong>AIF Team Offsite · April 13 – 17, 2026</strong><br>All 13 bedrooms are en suite</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     PAGE: CARS
+══════════════════════════════════════ -->
+<div id="page-cars" class="page">
+  <div class="page-wrap">
+
+    <div class="header">
+      <span class="header-eyebrow">Transportation</span>
+      <h1>Van <em>Allocations</em></h1>
+      <p class="header-sub">Mountain View ↔ South Lake Tahoe</p>
+      <div class="header-line"></div>
+    </div>
+
+    <div style="display: flex; justify-content: flex-end; margin-bottom: 16px;">
+      <button id="cars-edit-btn" class="btn btn-edit" style="display: none;">Edit Cars</button>
+      <div id="cars-edit-controls" class="edit-controls" style="display: none;">
+        <button id="cars-save-btn" class="btn btn-primary">Save</button>
+        <button id="cars-cancel-btn" class="btn btn-secondary">Cancel</button>
+      </div>
+    </div>
+
+    <!-- MV → TAHOE -->
+    <div class="direction-block">
+      <div class="direction-header">
+        <span class="direction-label">Mountain View</span>
+        <span class="direction-arrow">→</span>
+        <span class="direction-label">Lake Tahoe</span>
+        <span class="direction-date">Wed, April 15</span>
+      </div>
+      <div class="vans-grid" data-direction="mv-tahoe">
+        <div class="van-card" data-van="eva-to-tahoe">
+          <div class="van-header">
+            <span class="van-name">Eva's Van</span>
+            <span class="van-count">7 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Eva Wang</li>
+            <li>Jill Shih</li>
+            <li>Shannon Lieu</li>
+            <li>Dan Landau</li>
+            <li>Natalia Urrego</li>
+            <li>Rafael Mateus</li>
+            <li>Rishabh Singhal</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="ruby-to-tahoe">
+          <div class="van-header">
+            <span class="van-name">Ruby's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Ruby Valderrama</li>
+            <li>Ellie Jenkins</li>
+            <li>Nikki Angco</li>
+            <li>Katherine Baird</li>
+            <li>Kirsty Tan</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="eli-to-tahoe">
+          <div class="van-header">
+            <span class="van-name">Eli's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Eli Chen</li>
+            <li>Dan Landau</li>
+            <li>Ellen Li</li>
+            <li>Mike Rubino</li>
+            <li>Rakesh Utekar</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="michelle-to-tahoe">
+          <div class="van-header">
+            <span class="van-name">Michelle's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Michelle Lee</li>
+            <li>Dominic Chung</li>
+            <li>Jon Zemmelman</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="andy-to-tahoe">
+          <div class="van-header">
+            <span class="van-name">Andy's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Andy Ku</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAHOE → MV -->
+    <div class="direction-block">
+      <div class="direction-header">
+        <span class="direction-label">Lake Tahoe</span>
+        <span class="direction-arrow">→</span>
+        <span class="direction-label">Mountain View</span>
+        <span class="direction-date">Fri, April 17</span>
+      </div>
+      <div class="vans-grid" data-direction="tahoe-mv">
+        <div class="van-card" data-van="eva-from-tahoe">
+          <div class="van-header">
+            <span class="van-name">Eva's Van</span>
+            <span class="van-count">7 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Eva Wang</li>
+            <li>Ellie Jenkins</li>
+            <li>Shannon Lieu</li>
+            <li>Rakesh Utekar</li>
+            <li>Andrew Ng</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="eli-from-tahoe">
+          <div class="van-header">
+            <span class="van-name">Eli's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Eli Chen</li>
+            <li>Nikki Angco</li>
+            <li>Rishabh Singhal</li>
+            <li>Kirsty Tan</li>
+            <li>Mike Rubino</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="michelle-from-tahoe">
+          <div class="van-header">
+            <span class="van-name">Michelle's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Michelle Lee</li>
+            <li>Rishabh Singhal</li>
+            <li>Katherine Baird</li>
+            <li>Dominic Chung</li>
+          </ul>
+        </div>
+        <div class="van-card" data-van="andy-from-tahoe">
+          <div class="van-header">
+            <span class="van-name">Andy's Van</span>
+            <span class="van-count">5 people</span>
+          </div>
+          <div class="van-divider"></div>
+          <ul class="van-people">
+            <li class="driver">Andy Ku</li>
+            <li>Dominic Chung</li>
+            <li>Mike Rubino</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 10px;">
+        <span class="cars-note">Bay Area employees depart after lunch on Friday</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>AIF Team Offsite · April 13 – 17, 2026</strong><br>Rental vans · Please confirm your seat with your driver</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
